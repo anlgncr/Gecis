@@ -1,11 +1,11 @@
 /*Bu kütüphane ne işe yarar ?
 
 Programımızda integer türünde bir değişkenimiz olduğunu varsayalım.
-Biz bu değikenin değerini 5 saniye içerisinde 0'dan 100'e çıkarmak istiyoruz.
+Biz bu değişkenin değerini 5 saniye içerisinde 0'dan 100'e çıkarmak istiyoruz.
 Kütüphane sayesinde değişkenimiz 5 saniye içerisinde artarak 5. saniyede istediğimiz değer olan 100 değerine sahip oluyor.
-Ayrıca aynı anda başa bir değişkenin değerini bu şekilde değiştirebiliriz.
+Ayrıca aynı anda başka bir değişkenin değerini bu şekilde değiştirebiliriz.
 -Bir örnekle bunu inceleyelim :
-//Öncelikle kütühanenin sınıfı tanımlıyoruz
+//Öncelikle kütüphanenin sınıfı tanımlıyoruz
 Gecis animasyon(1); // Buradaki 1 parametresi bir adet geçiş animasyonu kullanacağımızı belirtir. İstenilen kadar değer girilebilir
 Gecis::Tween gecis1; // Animasyona ait olan özellikleri barındıracak olan Tween yapısı ile gecis1 adında değişken oluşturur
 
@@ -13,15 +13,13 @@ int pozisyon; // Değişken tanımlamasını yaptık
 void setup() {
 // Değişken adresi, ilk değer, son değer, toplam süre, tekrar et, terse dön, geçiş fonksiyonu
 	gecis1 = {&a, 0, 1000, 1000, false, true, YUMUSAK_GIRIS};
-// Gecisi ekliyoruz
-  	animasyon.ekle(&gecis1);
+  	animasyon.ekle(&gecis1); // Gecisi ekliyoruz
 }
 void loop() {
-// Gecislerin çalışabilmesi için animasyonların güncellenmesi gerekir
- animasyon.guncelle();
+ animasyon.guncelle(); // Gecislerin çalışabilmesi için animasyonların güncellenmesi gerekir
  
  if(!t1.bitti){
-//Geçiş sona erdi
+//Geçiş sona erdi tekrar çalışabilmesi için tekrar eklenmesi gerekir
  }
 }
 */
