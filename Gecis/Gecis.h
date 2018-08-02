@@ -16,24 +16,25 @@
 #define YUMUSAK_CIKIS_GIRIS_ELASTIK 11 
 #define YUMUSAK_GIRIS_CIKIS_ELASTIK 12
 
-
+/*Geçis için kullandğım ingilizce terim olan tween 'in anlamı iki şeyin arasında olan yani between(arasında)
+kelimesinden gelir*/
 class Gecis{
 	public:
-		Gecis(int);
+		Gecis(int); // Bu fonksiyonun parametresi kullanılacak olan tween sayısını belirtir
 		struct Tween{
-			int* degisken;
-			int ilk_deger;
-			int son_deger;
-			unsigned long toplam_zaman;
-			bool tekrar;
-			bool ters;
-			char fonk;
-			bool bitti;
-			unsigned long bas_zaman;
-			bool periyot;
+			int* degisken; // İçeriği güncellenecek olan değişken
+			int ilk_deger; // Değişkenin başlangıç değeri
+			int son_deger;	// Degişkenin bitiş değeri
+			unsigned long toplam_zaman; // Değişimin ne kadar sürede yapılacağı
+			bool tekrar; // Tekrar baştan başlayacak mı?
+			bool ters; // Son değere ulaşınca geri doğru, başlangıca gidecek mi?
+			char fonk; // Geçiş fonksiyonu
+			bool bitti; // Animasyon bittiğinde bu değer true olur ve animasyon diziden silinir
+			unsigned long bas_zaman; // Animasyonun başladığı zaman
+			bool periyot;	// Animasyon tekrar ederse bu değer bir kere true olur
 		};
 		
-		/*	Tweens dizisindeki indeksin bilgisini tutar	*/
+		/*	Tweens dizisindeki indeks bilgisini döndürür	*/
 		int index();
 		
 		/*	Tweens dizisine, indeksin gösterdiği adrese tween ekler	*/
@@ -46,7 +47,7 @@ class Gecis{
 		bool guncelle();
 		
 	private:
-		/* 	Tween yapısının göstergesine gösterge. Her bir gösterge 4byte
+		/* 	Tween yapısının göstergesine gösterge. 
 			Tweenlerin adreslerini tutan tek boyutlu dizi	*/
 		Tween** tweens; 
 		
@@ -75,7 +76,7 @@ class Gecis{
 		float yumusakGirisSekme(float);
 		float yumusakCikisGiris(float);
 		float yumusakGirisCikis(float);
-		float yumusakCikisElastik(float oran);
+		float yumusakCikisElastik(float);
 		float yumusakCikisGeri(float);
 		float yumusakGirisGeri(float);
 		float yumusakGiris(float);
