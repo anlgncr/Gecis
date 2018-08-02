@@ -1,3 +1,17 @@
+/*Bu kütüphane ne işe yarar ?
+
+Programımızda integer türünde bir değişkenimiz olduğunu varsayalım.
+Biz bu değikenin değerini 5 saniye içerisinde 0'dan 100'e çıkarmak istiyoruz.
+Kütüphane sayesinde değişkenimiz 5 saniye içerisinde artarak 5. saniyede istediğimiz değer olan 100 değerine sahip oluyor.
+Ayrıca aynı anda başa bir değişkenin değerini bu şekilde değiştirebiliriz.
+-Bir örnekle bunu inceleyelim :
+Öncelikle bir değişken tanımlıyoruz
+
+
+
+
+
+*/
 #include "Gecis.h"
 
 Gecis::Gecis(int length){
@@ -75,6 +89,8 @@ bool Gecis::guncelle(){
 					
 					if(!tweens[i]->tekrar)
 						tweens[i]->ters = false;
+					else
+						tweens[i]->periyot = true;
 				}
 				else if(tweens[i]->tekrar){
 					tweens[i]->bas_zaman = millis();
