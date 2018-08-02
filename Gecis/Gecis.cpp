@@ -19,7 +19,9 @@ void loop() {
  animasyon.guncelle(); // Gecislerin çalışabilmesi için animasyonların güncellenmesi gerekir
  
  if(!t1.bitti){
-//Geçiş sona erdi tekrar çalışabilmesi için tekrar eklenmesi gerekir
+/*Geçiş sona erdi tekrar çalışabilmesi için tekrar eklenmesi gerekir
+eğer tekrar etmesi isteniyorsa tekrar özelliği true yapılır böylece 
+özellik false yapılasaya kadar gecis silinmez*/
  }
 }
 */
