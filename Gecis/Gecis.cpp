@@ -5,12 +5,25 @@ Biz bu değikenin değerini 5 saniye içerisinde 0'dan 100'e çıkarmak istiyoru
 Kütüphane sayesinde değişkenimiz 5 saniye içerisinde artarak 5. saniyede istediğimiz değer olan 100 değerine sahip oluyor.
 Ayrıca aynı anda başa bir değişkenin değerini bu şekilde değiştirebiliriz.
 -Bir örnekle bunu inceleyelim :
-Öncelikle bir değişken tanımlıyoruz
+//Öncelikle kütühanenin sınıfı tanımlıyoruz
+Gecis animasyon(1); // Buradaki 1 parametresi bir adet geçiş animasyonu kullanacağımızı belirtir. İstenilen kadar değer girilebilir
+Gecis::Tween gecis1; // Animasyona ait olan özellikleri barındıracak olan Tween yapısı ile gecis1 adında değişken oluşturur
 
-
-
-
-
+int pozisyon; // Değişken tanımlamasını yaptık
+void setup() {
+// Değişken adresi, ilk değer, son değer, toplam süre, tekrar et, terse dön, geçiş fonksiyonu
+	gecis1 = {&a, 0, 1000, 1000, false, true, YUMUSAK_GIRIS};
+// Gecisi ekliyoruz
+  	animasyon.ekle(&gecis1);
+}
+void loop() {
+// Gecislerin çalışabilmesi için animasyonların güncellenmesi gerekir
+ animasyon.guncelle();
+ 
+ if(!t1.bitti){
+//Geçiş sona erdi
+ }
+}
 */
 #include "Gecis.h"
 
