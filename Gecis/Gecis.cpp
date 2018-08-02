@@ -9,7 +9,7 @@ Ayrıca aynı anda başka bir değişkenin değerini bu şekilde değiştirebili
 Gecis animasyon(1); // Buradaki 1 parametresi bir adet geçiş animasyonu kullanacağımızı belirtir. İstenilen kadar değer girilebilir
 Gecis::Tween gecis1; // Animasyona ait olan özellikleri barındıracak olan Tween yapısı ile gecis1 adında değişken oluşturur
 
-int pozisyon; // Değişken tanımlamasını yaptık
+int pozisyon; // Değişkenin tanımlamasını yaptık
 void setup() {
 // Değişken adresi, ilk değer, son değer, toplam süre, tekrar et, terse dön, geçiş fonksiyonu
 	gecis1 = {&a, 0, 1000, 1000, false, true, YUMUSAK_GIRIS};
