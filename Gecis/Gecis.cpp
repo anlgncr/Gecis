@@ -38,8 +38,8 @@ bool Gecis::ekle(Tween* _tween){
 
 	_tween->bas_zaman = millis();
 	
-	/*if((_tween->bas_zaman + _tween->toplam_zaman) <= _tween->toplam_zaman) //millis() taşar ise ekleme yapma
-		return false;*/
+	if((_tween->bas_zaman + _tween->toplam_zaman) < _tween->toplam_zaman) //millis() taşar ise ekleme yapma
+		return false;
 	
 	_tween->bitti = false;
 	tweens[tween_index] = _tween; // tween adresini diziye ata
